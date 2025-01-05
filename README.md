@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-Visual Studio 2019 or 2022 is recommended, Tangram is only tested on Windows (Clang or MSVC compiler).
+Visual Studio 2019 or 2022 is recommended, Tangram compressor is only tested on Windows (Clang or MSVC compiler).
 
 1.Cloning the repository with `git clone https://github.com/tangramcompression/tangram_compression.git`.
 
