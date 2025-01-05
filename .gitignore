@@ -31,9 +31,9 @@
 *.out
 *.app
 
-*.ts
+#*.ts
 
-/example/output/*
+#/example/output/*
 !/example/input/*.exe
 
 /build/*
