@@ -23,7 +23,7 @@ Run the example project, located under the "example" folder in the root director
 
 ## Benchmark
 
-Run the benchmark project, located under the "benchmark" folder in the root directory. Please note that, due to GitHub's storage limitations, we only provide the benchmarks dataset used for zstd-dict-22 and Tangram.
+Run the benchmark project, located under the "benchmark" folder in the root directory. Please note that, due to GitHub's storage limitations, we only provide the benchmarks dataset used for zstd-dict-22 and Tangram compression.
 
 ## Result
 
