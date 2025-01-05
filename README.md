@@ -1,6 +1,6 @@
-# Tangram Shader Compression
+## Tangram Shader Compression
 
-# Getting Started
+## Getting Started
 
 Visual Studio 2019 or 2022 is recommended, Tangram is only tested on Windows (Clang or MSVC compiler).
 
@@ -19,15 +19,15 @@ cmake -G "Visual Studio 17 2022" ../
 
 3.The compiler must be enabled with the -O3 optimization (otherwise the runtime will be very long).
 
-#Compression Demo
+## Compression Demo
 
 Run the example project, located under the "example" folder in the root directory.
 
-#Benchmark
+## Benchmark
 
 Run the benchmark project, located under the "benchmark" folder in the root directory. Please note that, due to GitHub's storage limitations, we only provide the benchmarks for zstd-22 and Tangram.
 
-#Benchmark
+## Result
 
 | Method            | Compressed Size | CR        | Decompression  |
 |-------------------|-----------------|-----------|----------------|
