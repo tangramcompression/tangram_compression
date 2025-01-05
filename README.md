@@ -17,8 +17,6 @@ cd build
 cmake -G "Visual Studio 17 2022" ../
 ```
 
-3.The compiler must be enabled with the -O3/-O2 optimization (otherwise the runtime will be very long).
-
 ## Compression Demo
 
 Run the example project, located under the "example" folder in the root directory.
