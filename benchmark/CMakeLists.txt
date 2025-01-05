@@ -1,0 +1,27 @@
+cmake_minimum_required(VERSION 3.19 FATAL_ERROR)
+
+#set(CMAKE_GENERATOR_TOOLSET "ClangCL")
+set(ALLOW_EXTERNAL_SPIRV_TOOLS ON)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+project(benckmark VERSION 0.1.0)
+
+file(GLOB_RECURSE THIRD_HEADER_FILES "${CMAKE_CURRENT_SOURCE_DIR}/*.h")
+file(GLOB_RECURSE THIRD_SOURCE_FILES "${CMAKE_CURRENT_SOURCE_DIR}/*.c")
+file(GLOB_RECURSE DECOMPRESSOR_SOURCE_FILES "${CMAKE_CURRENT_SOURCE_DIR}/../decompressor/*.c" "${CMAKE_CURRENT_SOURCE_DIR}/../decompressor/decompressor.cpp")
+
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/Oodel_Temp/oodle2.h")
+  add_definitions(-D ENABLE_OODLE_COMPRESSION=1)
+else()
+   add_definitions(-D ENABLE_OODLE_COMPRESSION=0)
+endif()
+
+add_definitions(-D BENCHMARK_ROOT_DIR=${CMAKE_CURRENT_SOURCE_DIR})
+add_executable(${PROJECT_NAME} ${DECOMPRESSOR_SOURCE_FILES} ${THIRD_HEADER_FILES} ${THIRD_SOURCE_FILES} "${CMAKE_CURRENT_SOURCE_DIR}/benchmark.cpp")
+
+target_include_directories(benckmark PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../decompressor)
+
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/Oodel_Temp/oodle2.h")
+  target_link_libraries(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Oodel_Temp/oo2core_win64.lib)
+endif()
