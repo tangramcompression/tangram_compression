@@ -38,7 +38,7 @@ Run the benchmark project, located under the "benchmark" folder in the root dire
 | **Lz4hc-default** | 562.4MB         | 3:1       | **368.2ms**    |
 | **Oodle-kraken**  | 435.7MB         | 3.9:1     | 1481.6ms       |
 
-## Source Code Description:
+## Source Code Description
 
 The source code is located in the `source` folder. Below is a description of each subfolder:
 
@@ -56,7 +56,7 @@ The source code is located in the `source` folder. Below is a description of eac
 
 ---
 
-## File Descriptions:
+## File Descriptions
 
 ### `ast_to_gl`
 - **ast_to_glsl.cpp**: Converts abstract syntax tree (AST) to GLSL.
