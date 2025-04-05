@@ -1,4 +1,10 @@
 ## Tangram Shader Compression
+The shader permutation problem causes the game’s shader code files to take up a lot of package space. For mobile games,
+large package sizes leads to increased download times and increases the storage space required on the device. In this paper,
+we propose a novel compression algorithm specifically for shader code. Our method extracts common syntactic structures
+from shaders and stores them as reusable code blocks, allowing shaders to reference these blocks by their indices only. This
+method significantly improves both the compression ratio and decompression speed. Compared to state-of-the-art compression
+algorithms, our algorithm achieves a eightfold improvement in compression ratio
 
 ## Getting Started
 
@@ -30,11 +36,11 @@ Run the benchmark project, located under the "benchmark" folder in the root dire
 | Method            | Compressed Size | CR        | Decompression  |
 |-------------------|-----------------|-----------|----------------|
 | **Ours**          | **17.2MB**      | **100.5:1** | **264.9ms**    |
-| **Zstd-dict-22**  | **157.6MB**     | **11:1**   | 1441.7ms       |
-| **Zstd-dict-3**   | 246.4MB         | 7:1       | 1802.7ms       |
-| **Zstd-22**       | 391.2MB         | 4.4:1     | 2515.5ms       |
-| **Lz4hc-default** | 562.4MB         | 3:1       | **368.2ms**    |
-| **Oodle-kraken**  | 435.7MB         | 3.9:1     | 1481.6ms       |
+| **Zstd-dict-22**  | **143.0MB**     | **12.0:1** | 1441.7ms       |
+| **Zstd-dict-3**   | 174.0MB         | 7:1       | 1802.7ms       |
+| **Zstd-22**       | 308.8MB         | 5.6:1     | 2515.5ms       |
+| **Lz4hc-default** | 427.5MB         | 4:1       | **368.2ms**    |
+| **Oodle-kraken**  | 332.8MB         | 5.2:1     | 1481.6ms       |
 
 ## Source Code Description
 
