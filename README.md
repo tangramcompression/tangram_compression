@@ -6,6 +6,8 @@ from shaders and stores them as reusable code blocks, allowing shaders to refere
 method significantly improves both the compression ratio and decompression speed. Compared to state-of-the-art compression
 algorithms, our algorithm achieves a eightfold improvement in compression ratio
 
+[Algorithm Detail](https://drive.google.com/file/d/1e3mk2E3Ccv4qk8nKSlpZlsyl7c9QjbC8/view)
+
 ## Getting Started
 
 Visual Studio 2019 or 2022 is recommended, Tangram compressor is only tested on Windows (Clang or MSVC compiler).
